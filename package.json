@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.css",
   "scripts": {
-    "sass": "node-sass -w scss/ -o css/ --recursive"
+    "sass": "node-sass styles/sass/main.scss styles/css/style.css -w"
   },
   "author": "",
   "license": "ISC",
