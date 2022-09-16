@@ -3,13 +3,17 @@
   --color-black: #000;
   --color-white: #fff;
 
-   --color-dark: #00f;
-  --color-light: #1390ff;
+   --color-dark-og: #00f;
+  --color-light-og: #1390ff;
+   --color-dark: #0000E0;
+  --color-light: #61B5FF;
 
   /* font families */
   --font-primary: Helvetica, Arial, sans-serif;
 
   /* font sizes */
+  --font-size-default: 62.5%;
+
   /* @link https://utopia.fyi/type/calculator?c=320,12,1.2,1400,18,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 
   /* 320/1400 */
@@ -53,12 +57,17 @@ body {
   background-color: var(--color-black);
   color: var(--color-white);
   font-family: var(--font-primary);
+  font-size: var(--font-size-default);
+}
+* {
+  font-size: inherit;
 }
 main {
   width: 100vw;
   margin-top: var(--space-m-l);
 }
 article {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -69,7 +78,9 @@ section {
 }
 
 img {
-  width: calc(100px + (210 - 100) * ((100vw - 300px) / (1400 - 300)));
+  width: calc(125px + (300 - 125) * ((100vw - 320px) / (1400 - 320)));
+  max-width: 300px;
+  height: auto;
   margin: var(--space-3xs) auto;
 }
 h1 {
@@ -81,5 +92,62 @@ label {
   font-size: var(--step-1);
 }
 form {
-  margin-top: var(--space-2xs);
+  display: flex;
+  width: 60%;
+  margin: var(--space-2xs) auto 0;
+}
+input {
+  flex-grow: 2;
+  padding-left: 0.4em;
+}
+button {
+  flex-grow: 1;
+  transition: all 0.3s;
+  pointer-events: all;
+  cursor: pointer;
+}
+input, 
+button {
+  font-size: var(--step-0);
+}
+
+.img-wrap {
+  width: 100%;
+}
+#ask-question-section {
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  form {
+    flex-direction: column;
+    gap: 0.25em;
+  }
+}
+
+@media (max-width: 767px) {
+  form {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  button {
+    max-width: 14em;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  /* button:hover, 
+  button:focus-within {
+    background-color: var(--color-dark);
+    border-color: var(--color-dark);
+    color: var(--color-light);
+  } */
+  button:hover, 
+  button:focus-within {
+    background-color: var(--color-black);
+    border-color: var(--color-white);
+    color: var(--color-white);
+  }
 }
