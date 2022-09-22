@@ -12,7 +12,7 @@ Thumbs.db
 node_modules
 
 # Ignore images folder
-images
+# images
 
 # Ignore all text files
 *.txt
