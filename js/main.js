@@ -139,8 +139,8 @@ function clickResetButton() {
   const btnText = document.getElementById('submitQuestion');
   if (btnText.value == 'Ask Another Question') {
     document.getElementById('submitQuestion').setAttribute('onclick', 'askQuestion();');
-    btnText.value = 'Submit Your Question';
-    btnText.innerHTML = 'Submit Your Question';
+    btnText.value = 'Reveal Your Answer';
+    btnText.innerHTML = 'Reveal Your Answer';
   }
 };
 
@@ -148,7 +148,7 @@ function clickResetButton() {
 function askQuestion() {
   // changes attribute function to clickResetButton() and updates button value and html
   const btnText = document.getElementById('submitQuestion');
-  if (btnText.value == 'Submit Your Question') {
+  if (btnText.value == 'Reveal Your Answer') {
     document.getElementById('submitQuestion').setAttribute('onclick', 'clickResetButton();');
     btnText.value = 'Ask Another Question';
     btnText.innerHTML = 'Ask Another Question';
