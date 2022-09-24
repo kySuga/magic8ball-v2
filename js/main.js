@@ -141,6 +141,7 @@ function clickResetButton() {
     document.getElementById('submitQuestion').setAttribute('onclick', 'askQuestion();');
     btnText.value = 'Reveal Your Answer';
     btnText.innerHTML = 'Reveal Your Answer';
+    btnText.style.cssText = 'background-color:""; border-color:""; color: "";'
   }
 };
 
@@ -152,5 +153,6 @@ function askQuestion() {
     document.getElementById('submitQuestion').setAttribute('onclick', 'clickResetButton();');
     btnText.value = 'Ask Another Question';
     btnText.innerHTML = 'Ask Another Question';
+    btnText.style.cssText = "background-color: var(--color-dark); border-color: var(--color-dark-light); color: var(--color-light);"
   }
 };
